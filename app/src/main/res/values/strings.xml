@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="enter_amount">Enter Amount</string>
+    <string name="tipAmount">0.00</string>
+    <string name="totalAmount">0.00</string>
+    <string name="total">Total</string>
+    <string name="tip">Tip</string>
+    <string name="_0">0%</string>
+    <string name="app_name">Tip Calculator</string>
+    <string name="_0_00">0.00</string>
+    <string name="keep">Keep</string>
+    <string name="info">Info</string>
+    <string name="share">Share</string>
+    <string name="how_many_people">How Many people</string>
+    <string name="total_per_person">Total Per Person</string>
+    <string name="refresh">Refresh</string>
+    <string-array name="numPerson">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>

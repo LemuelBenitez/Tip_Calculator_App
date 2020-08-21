@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.gridlayout.widget.GridLayout
+
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText_BillAmount"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="#00FFFF"
+            android:ems="10"
+            android:hint="@string/enter_amount"
+            android:inputType="numberDecimal"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:max="50"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/precentage"
+            android:layout_width="125dp"
+            android:layout_height="33dp"
+            android:gravity="center_horizontal"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/tipId"
+            android:layout_width="124dp"
+            android:layout_height="34dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tip"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_column="0"
+
+            app:layout_row="2" />
+
+        <TextView
+            android:id="@+id/totalId"
+            android:layout_width="127dp"
+            android:layout_height="37dp"
+            android:gravity="center_horizontal"
+            android:text="@string/total"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_column="0"
+
+            app:layout_row="3" />
+
+        <TextView
+            android:id="@+id/tipAmount"
+            android:layout_width="262dp"
+            android:layout_height="30dp"
+            android:background="#FFA500"
+            android:gravity="center_horizontal"
+            android:text="@string/tipAmount"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_row="2"
+
+            />
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:background="#FFA500"
+            android:gravity="center_horizontal"
+            android:text="@string/totalAmount"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="5" />
+
+        <TextView
+            android:id="@+id/spinnerTitle"
+            android:layout_width="130dp"
+            android:layout_height="31dp"
+            android:gravity="center_horizontal"
+            android:text="@string/how_many_people"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <TextView
+            android:id="@+id/perPersonTotal"
+            android:layout_width="258dp"
+            android:layout_height="30dp"
+            android:background="#FFA500"
+            android:gravity="center_horizontal"
+            android:text="@string/_0_00"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_row="4" />
+
+        <TextView
+            android:id="@+id/perPersonTotalTitle"
+            android:layout_width="127dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:text="@string/total_per_person"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="4" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:orientation="vertical"
+            app:layout_columnSpan="1"
+            app:layout_row="6">
+
+            <RadioButton
+                android:id="@+id/radio_keep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/keep" />
+
+            <RadioButton
+                android:id="@+id/radio_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/tip" />
+
+            <RadioButton
+                android:id="@+id/radio_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/total" />
+
+        </RadioGroup>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:onClick="onClick"
+        android:text="@string/refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
